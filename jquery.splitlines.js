@@ -125,6 +125,11 @@
 				tempLine.html('');
 				w--;
 			}
+			if (words[w] == "" && words[w-2] != '') {
+			    prev = '';
+			    newHtml.append(_markupContent(settings.tag, tempLine.html()));
+			    tempLine.html('');
+			}
 		}
 		newHtml.append(_markupContent(settings.tag, tempLine.html()));
 
